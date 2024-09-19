@@ -25,6 +25,9 @@
 	git commit -m "mensaje"
 	
 	git clone https://github.com/Franco26Junio87/chatava.git
+	git remote add origin https://github.com/Franco26Junio87/chatava.git
+	
+	git push -u origin main
 	
 4) python manage.py runserver 0.0.0.0:8000
 	Se modifica en settings.py ALLOWED_HOSTS = ['*']
