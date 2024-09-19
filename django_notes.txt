@@ -1,0 +1,31 @@
+1) Instalación Python y Virtualenv
+	sudo apt update
+	sudo apt upgrade
+	wget https://bootstrap.pypa.io/get-pip.py
+	sudo python3 get-pip.py
+	sudo pip3 install virtualenv
+	
+2) Se genera carpeta principal para GIT (chatava) y se instala Django
+	virtualenv venv -p python3
+	source venv/bin/activate
+	sudo pip install django
+	(django-admin --version)
+	
+	(pip freeze)
+	
+	django-admin startproject myproject
+	python manage.py runserver
+	
+3) GIT
+	git config --global user.name "Franco"
+	git config --global user.email fran@hotmail.com
+	git config --global init.defaultBranch main
+	git init
+	git add -A
+	git commit -m "mensaje"
+	
+	git clone https://github.com/Franco26Junio87/chatava.git
+	
+4) python manage.py runserver 0.0.0.0:8000
+	Se modifica en settings.py ALLOWED_HOSTS = ['*']
+	Se busca la ip del servidor y se entra desde otro dispositivo, conectado a la misma red.
