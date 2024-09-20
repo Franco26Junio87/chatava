@@ -1,0 +1,58 @@
+/**************************************************************************************************/
+										Comandos Git
+/**************************************************************************************************/
+
+1) Creo carpeta a versionar
+2) git init (para generar la carpeta .git)
+   git status (muestra los archivos que están para versionar)
+   
+   Los archivos están en el working directory
+   
+3) git add -A (los archivos pasan al stage)
+   
+4) git commit -m "comentario" (los archivos pasan al repositorio con nro de commit generado)
+   
+
+/**************************************************************************************************/
+
+#) En cualquier momento:
+   git log (para ver el estado de los commits)
+   git log --status (para ver el estado de los commits con más detalle)
+   
+   si hago un cambio en el archivo, antes del stage, se descartan los cambios con:
+   git restore <file>
+   
+   git restore --staged <file> (para sacar de stage)
+   
+#) Si aparece (HEAD detached at xxx)
+   Como git hace el checkout de un commit (en vez de una rama), te pone en él sin estar en una rama. 
+   Para sacarlo hay que hacer un checkout de la rama en la que estabas y sales del detached HEAD.
+   git checkout <branch>
+   
+#) En caso de tener nuevos archivos/carpeta en el working directory y los quiero eliminar: 
+	(queda todo como el último commit hecho)
+	# Primero mostramos el listado de los ficheros a eliminar:
+	git clean -fn
+
+	# Si estamos conforme eliminamos los ficheros:
+	git clean -f
+
+	# Si ademas queremos eliminar directorios:
+	git clean -fd
+
+	# Si queremos elminar los ficheros ignorados (ignored files):
+	git clean -fX
+
+	# Si queremos eliminar tanto los ignorados como los que no:
+	git clean -fx
+	
+#) Para ir a un commit anterior:	
+   git reset --hard <commit>  (eso borra los commits intermedios)
+
+   Siempre se pueden recuperar con 
+   git reflog
+
+#) Para ir a otro commit anterior:
+   git checkout <commit>
+   Eso me trae los cambios anteriores, pero tengo que commitear. (Alguna modificación más)
+

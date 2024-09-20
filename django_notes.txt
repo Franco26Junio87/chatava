@@ -26,6 +26,7 @@
 	
 	git clone https://github.com/Franco26Junio87/chatava.git
 	git remote add origin https://github.com/Franco26Junio87/chatava.git
+	(en el caso de clonar, primero se clona y después se genera el VENV)
 	
 	git push -u origin main
 	
