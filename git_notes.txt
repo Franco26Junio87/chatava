@@ -56,3 +56,8 @@
    git checkout <commit>
    Eso me trae los cambios anteriores, pero tengo que commitear. (Alguna modificación más)
 
+#) Para sacar un documento que ya estaba siendo versionado:
+   git update-index --assume-unchanged ruta_al_archivo/nombre_del_archivo
+
+   Para agregarlo nuevamente:
+   git update-index --no-assume-unchanged ruta_al_archivo/nombre_del_archivo

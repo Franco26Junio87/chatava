@@ -1,2 +1,6 @@
-/virtual_environment
+__pycache__/
+*.py[cod]
+.env
+venv/
+virtual_environment/
 *.sqlite3
