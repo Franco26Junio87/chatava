@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic.base import RedirectView
 from rooms import views as rooms_views
+from accounts import views as accounts_views
 
 urlpatterns = [
     path('', rooms_views.home, name='home'),
+    path('signup/', accounts_views.signup, name='signup'),
     path('admin/', admin.site.urls),
     path('favicon.ico', RedirectView.as_view(
         url='/static/images/favicon.ico')),

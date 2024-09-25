@@ -1,12 +1,9 @@
-{% load static %}<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Rooms</title>
-		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-	</head>
+{% extends 'base.html' %}
 
-	<body>
-		<h1>Rooms</h1>
-	</body>
-</html>
+{% block breadcrumb %}
+	<li class="breadcrumb-item active">Rooms</li>
+{% endblock %}
+
+{% block content %}
+	<h1>chat room</h1>
+{% endblock %}
