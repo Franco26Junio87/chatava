@@ -17,12 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic.base import RedirectView
+from django.contrib.auth import views as auth_views
 from rooms import views as rooms_views
 from accounts import views as accounts_views
 
 urlpatterns = [
     path('', rooms_views.home, name='home'),
     path('signup/', accounts_views.signup, name='signup'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('admin/', admin.site.urls),
     path('favicon.ico', RedirectView.as_view(
         url='/static/images/favicon.ico')),
